@@ -1,1 +1,1 @@
-## CryptoList built with VueJS
+## CryptoList built with Vue, Vue Router, Vuex, Axios and Vue-Material

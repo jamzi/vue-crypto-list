@@ -3,7 +3,9 @@
     <md-card>
       <ul v-if="currency">
         <p>{{ currency.name }}</p>
-        <p>{{ currency.price_usd }} USD</p>
+        <p v-if="currency.price_usd">{{ currency.price_usd }} USD</p>
+        <p v-if="currency.price_eur">{{ currency.price_eur }} EUR</p>
+        <p v-if="currency.price_cny">{{ currency.price_cny }} CNY</p>
       </ul>
       <ul v-if="errors && errors.length">
         <li v-for="error in errors" :key="error">
@@ -26,7 +28,6 @@ export default {
       return this.$store.getters.getCurrencyById(currencyId);
     },
     ...mapState([
-      'selectedCurrency',
       'errors'
     ])
   },
