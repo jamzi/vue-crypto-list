@@ -18,16 +18,16 @@
 
 <script>
 
-import { mapState } from 'vuex'
+import { mapState } from 'vuex';
 
 export default {
-  name: "Currencies",
+  name: 'Currencies',
   computed: mapState([
     'currencies',
     'errors'
   ]),
   created() {
-    this.$store.dispatch('getCurrencies')
+    this.$store.dispatch('getCurrencies');
   }
 };
 </script>

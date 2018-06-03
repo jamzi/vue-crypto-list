@@ -1,10 +1,10 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-import Currencies from './components/Currencies'
-import CurrencyDetail from './components/CurrencyDetail'
-import Settings from './components/Settings'
+import Vue from 'vue';
+import Router from 'vue-router';
+import Currencies from './components/Currencies';
+import CurrencyDetail from './components/CurrencyDetail';
+import Settings from './components/Settings';
 
-Vue.use(Router)
+Vue.use(Router);
 
 export default new Router({
     routes: [
@@ -24,4 +24,4 @@ export default new Router({
             component: Settings
         }
     ]
-})
+});

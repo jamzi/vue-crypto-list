@@ -16,13 +16,14 @@
 
 <script>
 
-import { mapState } from 'vuex'
+import { mapState } from 'vuex';
 
 export default {
-  name: "CurrencyDetail",
+  name: 'CurrencyDetail',
   computed: {
     currency() {
-      return this.$store.getters.getCurrencyById(this.$route.params.currencyId)
+      const currencyId = this.$route.params.currencyId;
+      return this.$store.getters.getCurrencyById(currencyId);
     },
     ...mapState([
       'selectedCurrency',
@@ -30,10 +31,12 @@ export default {
     ])
   },
   created() {
-    if (this.$store.state.currencies && this.$store.state.currencies.length) {
-      this.$store.dispatch('getCurrency', { currencyId: this.$route.params.currencyId })
+    const currencies = this.$store.state.currencies;
+    const currencyId = this.$route.params.currencyId;
+    if (currencies && currencies.length) {
+      this.$store.dispatch('getCurrency', { currencyId });
     } else {
-      this.$store.dispatch('getCurrencies')
+      this.$store.dispatch('getCurrencies');
     }
   }
 };

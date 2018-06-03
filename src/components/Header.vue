@@ -9,10 +9,10 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapState } from 'vuex';
 
 export default {
-  name: "Header",
+  name: 'Header',
   computed: mapState([
     'selectedCurrency'
   ])

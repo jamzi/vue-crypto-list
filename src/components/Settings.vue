@@ -10,17 +10,17 @@
 <script>
 
 export default {
-  name: "Settings",
+  name: 'Settings',
   computed: {
     selectedCurrency: {
       get () {
-        return this.$store.state.selectedCurrency
+        return this.$store.state.selectedCurrency;
       },
       set (currency) {
         this.$store.commit({
           type: 'setSelectedCurrency',
           currency
-        })
+        });
       }
     }
   }
